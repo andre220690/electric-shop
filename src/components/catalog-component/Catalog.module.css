@@ -1,0 +1,26 @@
+.catalogBtn{
+    display: inline;
+    background-color: rgb(201, 19, 19);
+    border-radius: 5px;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    margin-left: 3px;
+    font-size: 200%;
+    text-align: center;
+    color:white;
+}
+.categoryWord{
+    background-color: white;
+    width:30%;
+    position:absolute;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-size: x-large;
+    padding: 20px;
+    color: black;
+    border-radius: 25px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}

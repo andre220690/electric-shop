@@ -1,0 +1,9 @@
+.element{
+    border-radius: 25px;
+    padding: 0.5em;
+    background-color: blue;
+    margin-bottom: 2px;
+}
+.element:hover{
+    background-color: green;
+}

@@ -1,0 +1,66 @@
+.App{
+    background-color: rgb(218, 216, 216);
+}
+#logo{
+    width: 150px;
+    height: 150px;
+}
+
+.header{
+    display: flex;
+}
+.contacts{
+    margin: auto;
+}
+
+.header-info{
+    display: inline-block;
+}
+
+.find-bar{
+    display: inline-block;
+}
+
+.navigations{
+    display: flex;
+    width: 100%;
+}
+.filters{
+    display: inline-flex;
+    width: 25%;
+    font-size:medium;
+}
+.products-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.find-bar{
+    height: 3em;
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.5em;
+}
+.search{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 150%;
+}
+.btn-search{
+    background-color: blue;
+    display: inline-block;
+    padding: 10px 40px;
+    margin-right: 1%;;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}

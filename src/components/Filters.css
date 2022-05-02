@@ -1,0 +1,31 @@
+.f-filter{
+    background-color: rgb(73, 76, 221);
+    font-size: x-large;
+    border-radius: 10px;
+}
+.f-check-avialibility{
+    display: flex;
+    padding: 10%;
+}
+.f-check{
+    display: block;
+    transform: scale(150%);
+}
+.f-manufactures{
+    padding: 10%;
+    display: block;
+}
+.f-manuf-visivle{
+    display: flex;
+}
+.f-filter-label{
+    text-align: center;
+}
+.f-button-bar{
+    text-align: center;
+    padding-bottom: 3%;
+    background-color: cornflowerblue;
+}
+.f-btn{
+    background-color: chartreuse;
+}

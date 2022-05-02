@@ -1,0 +1,23 @@
+.category{
+    display: block;
+    background-color: blue;
+    border-radius: 25px;
+    padding: 0.5em;
+    position: relative;
+    margin-bottom: 1px;
+}
+.subWord{
+    background-color: white;
+    position: absolute;
+    display: inline;
+    margin-left: 1px;
+    left:100%;
+    padding: 0.5em;
+    border-radius: 25px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+.category:hover{
+    background-color: green;
+}

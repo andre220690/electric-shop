@@ -1,0 +1,8 @@
+{
+    "contacts": {
+        "phone": "88005353535",
+        "email": "shop@shop.ru"
+    },
+    "logo": "https://www.onlinetrade.ru/templates/images/logo_vector.svg?001",
+    "api": "https://localhost:44342/"
+}
