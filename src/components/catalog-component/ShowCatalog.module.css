@@ -1,10 +1,11 @@
 .category{
     display: block;
     background-color: blue;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 0.5em;
     position: relative;
     margin-bottom: 1px;
+    text-align: center;
 }
 .subWord{
     background-color: white;

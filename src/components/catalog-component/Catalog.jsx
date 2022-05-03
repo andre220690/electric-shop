@@ -1,6 +1,7 @@
 import cl from './Catalog.module.css';
 import React, {useEffect, useState} from 'react';
 import ShowCatalog from './ShowCatalog';
+import ButtonCatalog from '../../UI/ButtonCatalog';
 
 const Catalog = ({getCategory, getCatalogId}) => {
     const [isShow, setIsShow] = useState(false);
@@ -16,16 +17,28 @@ const Catalog = ({getCategory, getCatalogId}) => {
     },[])
 
   return (
-        <div className={cl.catalogBtn} onClick={showCatalog}>Каталог
+      <div className={cl.catalogBtn}>
+          <ButtonCatalog showCatalog={showCatalog}/>
             {isShow
-            ?(<div className={cl.categoryWord}>
-                {category.map((item, i)=>
-                <ShowCatalog getCatalogId={getCatalogId} item={item} key={i}/>
-            )}
-            </div>)
-            :<div></div>
-            }
-      </div>    
+                ?(<div className={cl.categoryWord}>
+                    {category.map((item, i)=>
+                    <ShowCatalog getCatalogId={getCatalogId} item={item} key={i}/>
+                )}
+                </div>)
+                :<div></div>
+                }
+      </div>
+      
+    //     <div className={cl.catalogBtn} onClick={showCatalog}>Каталог
+    //         {isShow
+    //         ?(<div className={cl.categoryWord}>
+    //             {category.map((item, i)=>
+    //             <ShowCatalog getCatalogId={getCatalogId} item={item} key={i}/>
+    //         )}
+    //         </div>)
+    //         :<div></div>
+    //         }
+    //   </div>    
   )
 }
 

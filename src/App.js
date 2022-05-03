@@ -7,12 +7,15 @@ import Product from './components/Product';
 import Filters from './components/Filters';
 import Catalog from './components/catalog-component/Catalog';
 import BasketInfo from './components/basket-component/BasketInfo';
+import ButtonSearth from './UI/ButtonSearth';
+import InputSearth from './UI/InputSearth';
 
 function App() {
 
   const [products, setProducts] = useState([]);
   const [filtersManuf, setFiltersManuf] = useState();
   const [isSumm, setIsSumm] = useState(true);
+  const [fieldSearth, setFieldSearth] = useState();
 
   const[getAll, getSearch, getInfo, getCategory, getCatalogId, getAnalog, getComplect] = useApi(setProducts, setFiltersManuf);
 
@@ -24,9 +27,8 @@ function App() {
   },[])
 
   const search=()=>{
-    var search_find = document.getElementsByClassName('search')[0].value;
-    if(search_find){
-      getSearch(search_find);
+    if(fieldSearth){
+      getSearch(fieldSearth);
     }else{
       getAll();
     }
@@ -42,9 +44,9 @@ function App() {
           <BasketInfo setIsSumm={setIsSumm} isSumm={isSumm}/>
       </div>
       <div className='find-bar'>
-        <Catalog className='catalog' getCategory={getCategory} getCatalogId={getCatalogId}/>       
-        <input className='search'/>
-        <button className='btn-search' onClick={search}>Поиск</button>
+        <Catalog getCategory={getCategory} getCatalogId={getCatalogId}/>       
+        <InputSearth fieldSearth={fieldSearth} setFieldSearth={setFieldSearth}/>
+        <ButtonSearth className='btn-search' searth={search}/>
       </div>
       <div className='navigations'>
         <div className='filters'>

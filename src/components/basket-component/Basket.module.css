@@ -21,6 +21,7 @@
     margin-right: 100px;
 }
 .outSide{
+    z-index: 11;
     position: fixed;
     top: 0;
     bottom: 0;

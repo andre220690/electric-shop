@@ -18,7 +18,7 @@ const ShowCatalog = ({item, getCatalogId}) => {
   }
 
   return (
-    <div className={cl.category} onMouseEnter={showTrue} onMouseLeave={showFalse}>
+    <div className={cl.category} onMouseEnter={showTrue} onMouseLeave={showFalse}>        
         {name.category}
         {isShow
         ?(<div className={cl.subWord}>

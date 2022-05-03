@@ -37,9 +37,9 @@
 }
 .find-bar{
     height: 3em;
-    width: 100%;
+    width: 90%;
     display: flex;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 .search{
     border-radius: 5px;
@@ -49,18 +49,4 @@
     margin-left: 3px;
     margin-right: 3px;
     font-size: 150%;
-}
-.btn-search{
-    background-color: blue;
-    display: inline-block;
-    padding: 10px 40px;
-    margin-right: 1%;;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
 }

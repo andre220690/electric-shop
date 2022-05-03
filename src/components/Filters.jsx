@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import ButtonGreen from '../UI/ButtonGreen';
 import './Filters.css'
 
 const Filters = (props) => {
@@ -43,8 +44,8 @@ const Filters = (props) => {
         </div>
 
         <div className='f-button-bar'>
-            <button className='f-btn' id='select' onClick={checkManuf}>Показать</button>
-            <button className='f-btn' id='refrash' onClick={props.getAll}>Сбросить</button>
+            <ButtonGreen value={'Показать'} click={checkManuf}/>
+            <ButtonGreen value={'Сбросить'} click={props.getAll}/>
         </div>
     </div>
   )

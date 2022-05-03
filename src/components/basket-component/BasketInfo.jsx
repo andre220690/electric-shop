@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ButtonBasket from '../../UI/ButtonBasket';
 import Basket from './Basket'
 import cl from './Basket.module.css'
 
@@ -24,7 +25,7 @@ const BasketInfo = ({setIsSumm, isSumm}) => {
   return (
     <div className={cl.basket}>
         <div className={cl.summ}>В корзине: {summ}</div>
-        <button className={cl.btnBasket} value='В корзину' onClick={()=> isShowBasket(true)}>В корзину</button>
+        <ButtonBasket click={()=> isShowBasket(true)}/>
         {showBasket
         ?<Basket isShowBasket={isShowBasket} item={basket} setItem={setBasket}/>
         :<div/>

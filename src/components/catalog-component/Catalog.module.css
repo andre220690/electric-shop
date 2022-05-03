@@ -1,16 +1,11 @@
 .catalogBtn{
     display: inline;
-    background-color: rgb(201, 19, 19);
-    border-radius: 5px;
-    width: 30%;
+    width: 20%;
     height: 100%;
-    margin: auto;
-    margin-left: 3px;
-    font-size: 200%;
-    text-align: center;
-    color:white;
+    margin-right: 20px;
 }
 .categoryWord{
+    z-index: 10;
     background-color: white;
     width:30%;
     position:absolute;

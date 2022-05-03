@@ -1,0 +1,16 @@
+.btnCatalog{
+    width: 100%;
+    height: 100%;
+}
+.btnSearth{
+    width: 15%;
+
+}
+.fieldSearth{
+    width: 100%;
+    margin: 0;
+    background-color: white;
+}
+.boxSearth{
+    width: 100%;
+}
