@@ -12,5 +12,8 @@
     background-color: white;
 }
 .boxSearth{
+    position: relative;
+    transform:translateY(-10px);
     width: 100%;
+    padding: 0;
 }

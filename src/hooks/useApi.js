@@ -1,6 +1,6 @@
 import PostService from "../API/PostService";
 
-export const useApi = (cbSetProd, cbSetFiltManuf) => {
+export const useApi = (cbSetProd, cbSetFiltManuf, setViewBanner) => {
 
     const toJSON = (list)=>{
         var result = [];
@@ -13,12 +13,14 @@ export const useApi = (cbSetProd, cbSetFiltManuf) => {
     const getSearch = async (search)=>{
         const response = await PostService.getSearch(search);
         var result = toJSON(response.data);
+        setViewBanner(false);
         cbSetProd(result);
         cbSetFiltManuf(manuf(result));
     }
     const getAll = async () => {
         const response = await PostService.getAll();
         var result = toJSON(response.data);
+        setViewBanner(true);
         cbSetProd(result);   
         cbSetFiltManuf(manuf(result));
     }
@@ -35,18 +37,21 @@ export const useApi = (cbSetProd, cbSetFiltManuf) => {
     const getCatalogId = async (id)=>{
         const response = await PostService.getCatalogId(id);
         const result = toJSON(response.data);
+        setViewBanner(false);
         cbSetProd(result);
         cbSetFiltManuf(manuf(result));
     }
     const getAnalog = async (id)=>{
         const response = await PostService.getAnalog(id);
         const result = toJSON(response.data);
+        setViewBanner(false);
         cbSetProd(result);
         cbSetFiltManuf(manuf(result));
     }
     const getComplect = async (id)=>{
         const response = await PostService.getComplect(id);
         const result = toJSON(response.data);
+        setViewBanner(false);
         cbSetProd(result);
         cbSetFiltManuf(manuf(result));
     }

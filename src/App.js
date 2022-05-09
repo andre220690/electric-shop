@@ -16,8 +16,9 @@ function App() {
   const [filtersManuf, setFiltersManuf] = useState();
   const [isSumm, setIsSumm] = useState(true);
   const [fieldSearth, setFieldSearth] = useState();
+  const [viewBanner, setViewBanner] = useState(true)
 
-  const[getAll, getSearch, getInfo, getCategory, getCatalogId, getAnalog, getComplect] = useApi(setProducts, setFiltersManuf);
+  const[getAll, getSearch, getInfo, getCategory, getCatalogId, getAnalog, getComplect] = useApi(setProducts, setFiltersManuf, setViewBanner);
 
   const[availabilityFilter, manifactureFilter] = useFilter(products, setProducts);
 
@@ -56,6 +57,12 @@ function App() {
           }
         </div>
         <div className='products-list'>
+          {viewBanner
+          ?<div>
+            <img className='banner' src='https://img.freepik.com/free-vector/wide-colored-horizontal-selling-banner_156943-703.jpg?w=1380'/>
+          </div>
+          :<div/>
+          }
           {products.map((item)=>
             <Product key={item.Id} item={item} getInfo={getInfo} getAnalog={getAnalog} getComplect={getComplect} setIsSumm={setIsSumm}/>
           )}

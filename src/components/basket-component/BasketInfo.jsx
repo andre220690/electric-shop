@@ -11,12 +11,12 @@ const BasketInfo = ({setIsSumm, isSumm}) => {
     useEffect(()=>{
         if(localStorage.length>0){
             var arr = JSON.parse(localStorage.getItem('basket'));
-            var summ = 0;
+            var result = 0;
             setBasket(arr);
             arr.forEach(element => {
-                var result = summ + (Number(element.count)*Number(element.price));
-                setSumm(result.toFixed(2));
+                result = result + (Number(element.count)*Number(element.price));
             });
+            setSumm(result.toFixed(2));
         }
         setIsSumm(true);    
         
@@ -27,7 +27,7 @@ const BasketInfo = ({setIsSumm, isSumm}) => {
         <div className={cl.summ}>В корзине: {summ}</div>
         <ButtonBasket click={()=> isShowBasket(true)}/>
         {showBasket
-        ?<Basket isShowBasket={isShowBasket} item={basket} setItem={setBasket}/>
+        ?<Basket isShowBasket={isShowBasket} item={basket} setItem={setBasket} summ={summ} setIsSumm={setIsSumm}/>
         :<div/>
         }        
     </div>

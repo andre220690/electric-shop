@@ -1,8 +1,9 @@
 import cl from './Basket.module.css'
 import cross from '../../img/red-cross.png'
 import Order from './Order'
+import { red } from '@mui/material/colors'
 
-const Basket = ({isShowBasket, item, setItem}) => {
+const Basket = ({isShowBasket, item, setItem, summ, setIsSumm}) => {
 
   const closeBasket = ()=>{
     isShowBasket(false);
@@ -21,7 +22,8 @@ const Basket = ({isShowBasket, item, setItem}) => {
           result.push(element);
       });
       setItem(result);
-      localStorage.setItem('basket', JSON.stringify(result));   
+      localStorage.setItem('basket', JSON.stringify(result));
+      setIsSumm(false);
     }
   }
 
@@ -54,6 +56,7 @@ const Basket = ({isShowBasket, item, setItem}) => {
             }
           </tbody>
         </table>
+        <h1 className={cl.summToBasket}>Общая сумма {summ}</h1>
         <Order item={item} closeBasket={closeBasket}/>
       </div>
     </div>
